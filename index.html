@@ -4,174 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <p class="js-p result">0</p>
-      <p>
+    <div class="calculator">
+      <div class="display" class="display">0</div>
+      <div class="buttons">
         <button
           onclick="
-        calculator('1');
-          "
+            calculation=''
+            print();"
+        class="clear"
         >
-          1
+          C
         </button>
-
         <button
           onclick="
-        calculator('2');
-          "
+            deleted()
+            print();"
         >
-          2
+          ⌫
         </button>
+        <button onclick="calculator('/')">÷</button>
+        <button onclick="calculator('*')">×</button>
 
-        <button
-          onclick="
-        calculator('3');
-          "
-        >
-          3
-        </button>
+        <button onclick="calculator('7')">7</button>
+        <button onclick="calculator('8')">8</button>
+        <button onclick="calculator('9')">9</button>
+        <button onclick="calculator('-')">−</button>
 
-        <button  class="operator"
-          onclick="
-        calculator('+');
-          "
-        >
-          +
-        </button>
-      </p>
+        <button onclick="calculator('4')">4</button>
+        <button onclick="calculator('5')">5</button>
+        <button onclick="calculator('6')">6</button>
+        <button onclick="calculator('+')">+</button>
 
-      <p>
-        <button
-          onclick="
-        calculator('4');
-          "
-        >
-          4
-        </button>
-
-        <button
-          onclick="
-        calculator('5');
-          "
-        >
-          5
-        </button>
-
-        <button
-          onclick="
-        calculator('6');
-          "
-        >
-          6
-        </button>
-
-        <button  class="operator"
-          onclick="
-        calculator('-');
-          "
-        >
-          -
-        </button>
-      </p>
-
-      <p>
-        <button
-          onclick="
-        calculator('7');
-          "
-        >
-          7
-        </button>
-
-        <button
-          onclick="
-        calculator('8');
-          "
-        >
-          8
-        </button>
-
-        <button
-          onclick="
-        calculator('9');
-          "
-        >
-          9
-        </button>
-
-        <button  class="operator"
-          onclick="
-        calculator('*');
-          "
-        >
-          *
-        </button>
-      </p>
-
-      <p class="button">
-        <button
-          onclick="
-        calculator('.');
-        "
-        >
-          .
-        </button>
-
-        <button
-          onclick="
-        calculator('0');
-          "
-        >
-          0
-        </button>
-
+        <button onclick="calculator('1')">1</button>
+        <button onclick="calculator('2')">2</button>
+        <button onclick="calculator('3')">3</button>
         <button
           onclick="
         calculation=eval(calculation);
-        localStorage.setItem('calculation',calculation);
-        print();
-      
-          "
+        // localStorage.setItem('calculation',calculation);
+        print();"
+          class="equal"
+          rowspan="2"
         >
           =
         </button>
 
-        <button  class="operator"
-          onclick="
-        calculator('/');
-          "
-        >
-          /
-        </button>
-
-        
-      </p>
-      <p class="button">
-        <button class="clear-button"
-          onclick="
-        calculation=''
-        print();
-        "
-        >
-          Clear
-        </button>
-        <button class="delete-button"
-          onclick="
-        deleted()
-        print();
-        "
-        >
-        <img src="icon/backspace.svg" alt="" width="30px" height="30px">
-        </button>
-      </p>
-    
+        <button onclick="calculator('0')" style="grid-column: span 2">0</button>
+        <button onclick="calculator('.')">.</button>
+      </div>
     </div>
-    
-
-    
 
     <script src="script.js"></script>
   </body>
