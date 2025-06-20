@@ -1,7 +1,7 @@
 let calculation = localStorage.getItem("calculation") || "";
 
 function calculator(digit) {
-  if (calculation.length < 15) {
+  if (calculation.length <= 15) {
     calculation += digit;
     print();
   } else {
@@ -15,4 +15,8 @@ function print() {
 
 function deleted() {
   calculation = calculation.slice(0, -1);
+}
+
+function result(){
+  calculation= String(eval(calculation));
 }
